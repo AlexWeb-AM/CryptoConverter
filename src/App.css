@@ -1,38 +1,115 @@
-.App {
-  text-align: center;
+* {
+    margin: 0;
+    padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    background-color: #1A1A1E;
+    color: white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.converter_div {
+   display: flex;
+   justify-content: center;
+   margin-top: 250px;
+}
+
+.converter_header {
+    width: 100%;
+    height:60px;
+    border-bottom: 2px solid #4D4E50;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.converter_header h3,.icon-react {
+    color: #7A7A7C;
+    font-weight: 500;
+    margin-left: 20px;
+}
+
+.icon-react {
+    margin-right: 20px;
+    font-size: 30px;
+}
+
+.converter {
+    width: 600px;
+    height: 250px;
+    background-color: #262629;
+    border-radius: 15px;
+    border: 1px solid #4D4E50;
+}
+
+.convert_main {
+    display: grid;
+    justify-content: center;
+}
+
+.convert_main input {
+    width: 500px;
+    height: 60px;
+    background-color:#1E1E21;
+    border: 1px solid #4D4E50;
+    border-radius: 15px;
+    margin-top: 20px;
+    color: white;
+    padding-left: 10px;
+    font-size: 17px;
+}
+
+.convert_main input:focus-visible {
+    outline: none;
+
+}
+
+select {
+    position: absolute;
+    margin-top: 30px;
+    right: 520px;
+    border: 1px solid #464646;
+    background-color: #0F0F10;
+    color: white;
+    font-weight: 500;
+    font-size: 17px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    width: 170px;
+    height: 40px;
+}
+
+select:focus-visible {
+    outline: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.crypto-logo {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  .converter_section {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.logo-container {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.crypto-logo {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
 }
