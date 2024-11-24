@@ -50,7 +50,11 @@ const Converter = () => {
   }, [amount, fromCrypto, toCrypto, cryptoData]);
 
   if (!cryptoData) {
-    return <div>Loading...</div>;
+    return (
+      <div className="loader_div">
+        <div className="loader"></div>
+      </div>
+    );
   }
 
   
@@ -63,7 +67,7 @@ const Converter = () => {
           <FaReact className="icon-react" />
         </header>
         <main className="convert_main">
-          <div>
+          <div className="input_div" >
             <input
               type="number"
               value={amount}
@@ -71,6 +75,7 @@ const Converter = () => {
               step="any"
             />
             <select value={fromCrypto} onChange={handleFromCryptoChange}>
+            <option value="">...</option>
               {cryptoData.map((crypto) => (
                 <option key={crypto.id} value={crypto.id}>
                   {crypto.name} ({crypto.symbol})
@@ -78,13 +83,14 @@ const Converter = () => {
               ))}
             </select>
           </div>
-          <div className="flex">
+          <div className="input_div">
             <input
               type="number"
               value={convertedAmount ?? ''}
               readOnly
             />
             <select value={toCrypto} onChange={handleToCryptoChange}>
+              <option value="">...</option>
               {cryptoData.map((crypto) => (
                 <option key={crypto.id} value={crypto.id}>
                   {crypto.name} ({crypto.symbol})
